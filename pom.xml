@@ -72,7 +72,7 @@
 					<entryPoint>["java", "-jar", "/${project.build.finalNmae}.jar"]</entryPoint>
 					<resources>
 						<resource>
-							<targetPath>/<targetPath>
+							<targetPath>/</targetPath>
 							<directory>${project.build.directory}</directory>
 							<include>${project.build.finalName}</include>
 						</resource>
