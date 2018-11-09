@@ -8,22 +8,25 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn -B -DskipTests clean package'
+                sh 'mvn -B -DskipTests clean package docker:build'
             }
         }
         stage('Test') {
             steps {
-                sh 'mvn test'
+				echo 'Testing....'
+                //sh 'mvn test'
             }
-            post {
-                always {
-                    junit 'target/surefire-reports/*.xml'
-                }
-            }
+            //post {
+            //    always {
+            //        junit 'target/surefire-reports/*.xml'
+            //    }
+            //}
         }
         stage('Deliver') {
             steps {
-                echo 'Deploying....'
+                echo 'Service provider Deploying....'
+			
+				echo 'OK works....'
             }
         }
     }

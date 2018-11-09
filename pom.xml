@@ -68,7 +68,8 @@
 				<version>0.4.13</version>
 				<configuration>
 					<imageName>svr_provider:0.0.1</imageName>
-					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+					<baseImage>lwieske/java-8</baseImage>
+					<entryPoint>["java", "-jar", "/${project.build.finalNmae}.jar"]</entryPoint>
 					<resources>
 						<resource>
 							<targetPath>/<targetPath>
