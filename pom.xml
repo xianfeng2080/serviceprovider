@@ -81,7 +81,7 @@
 						<imageTag>${project.version}</imageTag>
 					</imageTags>
 					<baseImage>lwieske/java-8</baseImage>
-					<entryPoint>["java", "-jar", "/${project.build.finalNmae}.jar"]</entryPoint>
+					<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>
